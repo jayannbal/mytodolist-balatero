@@ -1,33 +1,20 @@
-import React, { useState } from "react";
-import TaskInput from "./components/TaskInput";
-import TaskItem from "./components/TaskItem";
+import React, { Component } from "react";
+import "./App.css";
 
-function App() {
-  const [toDoList, setToDoList] = useState([]);
-
-  const addTask = (taskName) => {
-    const newTask = { taskName, checked: false };
-    setToDoList([...toDoList, newTask]);
-  };
-
-  console.log(toDoList);
-  return (
-    <>
-      <div className="container">
-        <h1>Task Master</h1>
-
-        <TaskInput addTask={addTask} />
-
-        <div className="toDoList">
-          <span>To do</span>
-          <ul className="list-items"></ul>
-          {toDoList.map((task, key) => (
-            <TaskItem task={task} key={key} />
-          ))}
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
         </div>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
       </div>
-    </>
-  );
+    );
+  }
 }
 
 export default App;
