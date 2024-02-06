@@ -39,11 +39,11 @@ class TodoList extends Component {
     return (
       <div className="todoListMain">
         <div className="header">
-          <h1>Todo List</h1>
+          <h1>My Simple ToDo List</h1>
           <form onSubmit={this.addItem}>
             <input
               ref={(a) => (this._inputElement = a)}
-              placeholder="enter task"
+              placeholder="enter your task"
             ></input>
             <button type="submit">add</button>
           </form>
